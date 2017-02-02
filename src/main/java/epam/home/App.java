@@ -1,9 +1,7 @@
 package epam.home;
 
-import epam.home.Plane.Aerobus;
-import epam.home.Plane.Boing;
-import epam.home.Plane.Plane;
-import epam.home.Plane.Transpot;
+import epam.home.Plane.*;
+import epam.home.Servise.AviaCompServise;
 
 import java.util.ArrayList;
 
@@ -22,7 +20,17 @@ public class App
 
         for (Plane plane : planes) {
             System.out.println(plane.toString());
-
         }
+
+        AviaCompany avi = new AviaCompany(planes);
+
+        AviaCompServise avServ = new AviaCompServise(avi);
+        System.out.println("Общая вместимость самолетов авиакомпании = " + avServ.allKolMest());
+
+        System.out.println("Общая грузоподъемность свмолетов авиакомпании = " + avServ.allGruzPod());
+
+
+
+
     }
 }
