@@ -3,6 +3,8 @@ package epam.home.Servise;
 import epam.home.Plane.AviaCompany;
 import epam.home.Plane.Plane;
 
+import java.util.ArrayList;
+
 /**
  * Created by Наталья on 02.02.2017.
  */
@@ -36,5 +38,18 @@ public class AviaCompServise {
         return allGruzPod;
     }
 
+
+    public ArrayList<Plane> findByToplivo(int num1, int num2){
+
+        ArrayList<Plane> plane = new ArrayList<Plane>();
+        for (Plane planes: avia.getPlane()) {
+            if (planes.getToplivo() >= num1 && planes.getToplivo() <= num2){
+                plane.add(planes);
+            }
+
+        }
+
+        return plane;
+    }
 
 }

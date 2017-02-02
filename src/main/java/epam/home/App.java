@@ -30,6 +30,11 @@ public class App
         System.out.println("Общая грузоподъемность свмолетов авиакомпании = " + avServ.allGruzPod());
 
 
+        for (Plane plane: avServ.findByToplivo(100000, 160000)) {
+            System.out.println(plane.toString());
+        }
+
+
 
 
     }
